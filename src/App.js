@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import DashBoard from "./LayOuts/DashBoardLayOut/DashBoard";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const Router = createBrowserRouter([
+  {
+    path: "/",
+    element: <DashBoard />,
+  },
+]);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <RouterProvider router={Router} />
     </div>
   );
 }
