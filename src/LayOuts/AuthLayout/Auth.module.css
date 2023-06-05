@@ -1,0 +1,159 @@
+.signIn{
+    display: flex;
+    justify-content: space-between;
+  }
+  .welcome{
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+ 
+  .button{
+    border: none;
+    background: transparent;
+  }
+  .login{
+    padding: 25px;
+    max-width: 465px;
+  }
+  .login h3{
+    margin-top: 25px;
+  }
+  .login .logo{
+    margin-top: -20px;
+  }
+  .welcomePara{
+  font-size: 17px;
+  margin-bottom: 20px;
+  color: #1d1c1c;
+}
+  .input label{
+    font-family: "DM Sans",sans-serif;
+    color: #1d1c1c!important;
+    font-size: 13px;
+    margin-bottom: 3px!important;
+
+
+  }
+  .input input{
+    width: 100%;
+    height: 52px;
+    background: #fff;
+    border-radius: 7px;
+    border: 1px solid #e8eaee;
+    margin-bottom: 5px;
+    font-size: 14px;
+    padding-left: 20px;
+    outline: unset;
+  
+  }
+  .input input:hover, .input input:focus{
+    border-color: #e26386;
+  }
+  .signInBtn{
+    height: 52px;
+    width: 100%;
+    color: #191919;
+    background: #f2718d;
+    border-radius: 7px;
+    border: none;
+    font-size: 17px;
+    font-weight: 500;
+    color: #fff;
+  }
+  .forgotPassword{
+    color: #e26386;
+    font-weight: 500;
+    float: right;
+    padding: 15px 0;
+    font-size: 13px;
+  }
+  .notRegisterd{
+    margin-top: 10px;
+    font-size: 16px;
+    color: #9ba0aa;
+    font-family: "DM Sans",sans-serif;
+  }
+  .notRegisterd span{
+    color: #e26386!important;
+  }
+  .conditions{
+    display: flex;
+    align-items: center;
+    color: #9ba0aa;
+  }
+  .conditions p{
+    margin-bottom: -4px;
+  }
+  .conditions img{
+    width: 45px;
+    margin-right: 10px;
+  }
+  .conditions .button{
+    font-size: 12px;
+    padding: 0 13px;
+    color: #9ba0aa;
+  }
+  .nuggets{
+    flex: 1;
+    background: linear-gradient(155.44deg,#f99f47 6.16%,#f3748a 92.32%);
+   
+    padding: 10px 20px;
+  }
+  .nuggets .content{
+    padding: 20px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+  }
+  .nuggets img{
+    width: 400px;
+    border: 7px solid white;
+    border-radius: 10px;
+    background: linear-gradient(155.44deg,#f99f47 6.16%,#f3748a 92.32%);
+  }
+  .nuggets p{
+    color: #fff;
+    font-family: "DM Sans",sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+   margin: 20px;
+  }
+  .nuggets h2{
+    color: white;
+    margin-top: 80px;
+  }
+
+  @media (max-width: 480px)  {
+
+    .login .logo{
+    display: none;
+    }
+    .nuggets{
+      display: none;
+    }
+    .conditions{
+        display: block;
+        text-align: center;
+    }
+    .conditions p{
+      margin-top: 10px;
+      font-size: 10px;
+    }
+    .conditions .button{
+      font-size: 10px;
+      padding: 2px 5px;
+      text-align: left;
+    }
+    .login{
+      padding: 5px;
+      margin-bottom: -15px;
+    }
+ 
+  }
+

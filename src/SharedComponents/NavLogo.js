@@ -10,7 +10,7 @@ const NavLogo = () => {
       <div>
         <img className={classes.imgLogo} src={logo} alt="logo" />
       </div>
-      <div>
+      <div style={{ display: "flex" }}>
         <button onClick={() => navigate("/signIn")} className={classes.signIn}>
           Sign in
         </button>

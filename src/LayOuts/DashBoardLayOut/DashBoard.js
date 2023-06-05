@@ -15,8 +15,8 @@ import william from "../../Assests/Svg/william.8a3097f5.svg";
 import ilakiya from "../../Assests/Images/pro_img.png";
 import jones from "../../Assests/Images/ngozijones.png";
 import abel from "../../Assests/Images/abel.png";
-import { useRef } from "react";
-import { useDraggable } from "react-use-draggable-scroll";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 import owner from "../../Assests/Images/profile-img.3273bc86.png";
 import element from "../../Assests/Svg/bg-elemtns.77a09de3.svg";
 import heading from "../../Assests/Svg/triangle.svg";
@@ -173,7 +173,7 @@ export default function DashBoard() {
         </div>
         <div className={classes.subTitle}>
           <h2>Happy users around the globe</h2>
-          <p>
+          <p className={classes.caroselaA}>
             The first platform that gives you a space to chat, talk, host <br />
             and participate in live events virtually
           </p>
@@ -251,17 +251,22 @@ export default function DashBoard() {
 }
 
 function MyComponent() {
-  const ref = useRef();
-  const { events } = useDraggable(ref);
-
   return (
-    <div
-      className="flex max-w-xl space-x-1 overflow-x-hidden scrollbar-hide"
-      {...events}
-      ref={ref}
-    >
+    <>
       <div className={classes.reviewPersons}>
-        <div className="flex-none w-52 h-32 bg-red-200">
+        <Carousel
+          ariaLabel
+          infiniteLoop={true}
+          showStatus={false}
+          emulateTouch={true}
+          swipeable={true}
+          selectedItem={4}
+          showIndicators={false}
+          showArrows={false}
+          width={1200}
+          centerMode={true}
+          centerSlidePercentage={44}
+        >
           <div className={classes.review}>
             <p>
               Rawcaster is the epitome of what a social media platform should be
@@ -271,15 +276,14 @@ function MyComponent() {
             </p>
             <div className={classes.title}>
               <div>
-                <img src={william} alt="william" />
+                <img className={classes.person} src={william} alt="william" />
               </div>
               <div>
                 <h6>William Sagoe</h6>
               </div>
             </div>
           </div>
-        </div>
-        <div className="flex-none w-52 h-32 bg-red-200">
+
           <div className={classes.review}>
             <p>
               This is highly commendable. And should be made to go viral.
@@ -288,16 +292,14 @@ function MyComponent() {
             </p>
             <div className={classes.title}>
               <div>
-                <img src={abel} alt="william" />
+                <img className={classes.person} src={abel} alt="william" />
               </div>
               <div>
                 <h6>Ngozi Jones</h6>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="flex-none w-52 h-32 bg-red-200">
           <div className={classes.review}>
             <p>
               Rawcaster is amazing! Because it combines many tools in a single
@@ -306,15 +308,14 @@ function MyComponent() {
             </p>
             <div className={classes.title}>
               <div>
-                <img src={jones} alt="william" />
+                <img className={classes.person} src={jones} alt="william" />
               </div>
               <div>
                 <h6>Abel Consiglio</h6>
               </div>
             </div>
           </div>
-        </div>
-        <div className="flex-none w-52 h-32 bg-red-200">
+
           <div className={classes.review}>
             <p>
               Rawcaster is a great application that acts as an all in one
@@ -324,15 +325,15 @@ function MyComponent() {
             </p>
             <div className={classes.title}>
               <div>
-                <img src={ilakiya} alt="william" />
+                <img className={classes.person} src={ilakiya} alt="william" />
               </div>
               <div>
                 <h6>Elakkiya Manivannan</h6>
               </div>
             </div>
           </div>
-        </div>
+        </Carousel>
       </div>
-    </div>
+    </>
   );
 }
